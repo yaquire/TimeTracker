@@ -1,4 +1,5 @@
 border = '~'
+baseRate = 11
 
 def startUp():
     print("This is the main menu please choose what you would like to do: ")
@@ -18,7 +19,47 @@ def startUp():
 
 
 def TimeClocker():
-    print()
+    print('~CLOCK IN & OUT ahs been chosen~')
+    while True:
+        clockIn1 = input('Clock In (24hr): ')
+        try:
+            clockIn1 = int(clockIn1)
+            break
+        except:
+            ValueError()
+            print('Please Enter a number (integer)')
+    
+    while True:
+        clockOut = input('Clock Out (24hr): ')
+        try:
+            clockOut = int(clockOut)
+            break
+        except:
+            ValueError()
+            print('Please Enter a number (integer)')
+
+    while True:
+        breakTime = input('Break (hrs): ')
+        try:
+            breakTime = float(breakTime)
+            break
+        except:
+            ValueError()
+            print('Please Enter a number (decimal/integer)')
+
+    clockIn1 = str(clockIn1)
+    clockOut = str(clockOut)
+
+    clockOutMinutes = int(clockOut[-2]+clockOut[-1])/60
+    clockIn1Minutes = int(clockIn1[-2]+clockIn1[-1])/60
+
+    print(clockOutMinutes ,clockIn1Minutes)
+
+
+
+    totalHours = ()
+    
+             
 
 def PayChecker():
     print()
